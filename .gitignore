@@ -1,0 +1,21 @@
+# --- Molecular Dynamics Raw Data ---
+# Exclude large trajectory and topology files
+raw_data/
+*.nc
+*.prmtop
+*.xtc
+
+# --- Processed Snapshots ---
+# Exclude individual PDB frames extracted for analysis
+plip_inputs/
+*.pdb
+
+# --- Results & Logs ---
+# Exclude analysis outputs and temporary logs
+plip_results/
+frames/
+*.log
+
+# --- System & Python Junk ---
+__pycache__/
+.DS_Store

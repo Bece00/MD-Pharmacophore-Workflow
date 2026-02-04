@@ -1,0 +1,16 @@
+# Step 1: Load the topology file
+parm ../../dimer_solv.prmtop
+
+# Step 2: Load the trajectory and extract the last 1 microsecond (Frames 4001-5000)
+# Assuming 1 frame per ns, capturing the equilibrated state of the simulation
+trajin ../../run1_prod.nc 4001 5000 1
+
+# Step 3: Remove solvent and ions to reduce file size and focus on protein-ligand interactions
+strip :WAT,HOH,TIP3,Na+,Cl-
+
+# Step 4: Perform RMS alignment to the first frame using Backbone atoms
+# This standardizes snapshots for accurate pharmacophore mapping
+rms first :1-580@CA,C,N
+
+# Step 5: Save processed snapshots as individual PDB files
+trajout run1_frame.pdb
