@@ -25,15 +25,17 @@ Modern drug discovery requires understanding the dynamic nature of protein-ligan
 
     Scripting: Python & Bash
 
-  ##  📁 Project Structure
-    MD-Pharmacophore-Workflow/
-├── scripts/
-│   ├── extract_last_1us.in   # Cpptraj script for trajectory processing
-│   ├── rename_frames.sh      # Bash script for batch file renaming
-│   └── extract_xml.py        # Python script to parse PLIP XML outputs
-├── docker/
-│   └── Dockerfile            # Container definition for reproducibility
-└── README.md
+  > **Project Architecture**
+> ```text
+> 📦 MD_pharmacophore_workflow
+>  ┣ 📂 docker
+>  ┃ ┗ 📜 Dockerfile
+>  ┣ 📂 scripts
+>  ┃ ┣ 📜 extract_last_1us.in
+>  ┃ ┣ 📜 extract_xml.py
+>  ┃ ┗ 📜 rename_frames.sh
+>  ┗ 📜 README.md
+> ```            
 
 
 ## ⚙️ Methodology
